@@ -28,14 +28,12 @@ ADD .ENV FILE
 #### Get a unique API Key
 | Steps | Example |
 | -------- | ----- |
-| To get an API key for the currency exchange website, go to the [ExchangeRate-API](https://www.exchangerate-api.com/) website and click on the button 'Get Free Key' | ![Go to the exchangerate-api.com site](assets/images/readme/exchange-rate-website.PNG) |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
+| To get an API key for the currency exchange website, go to the [ExchangeRate-API](https://www.exchangerate-api.com/) website.  | ![Go to the exchangerate-api.com site](assets/images/readme/exchange-rate-website.PNG) |
+|  Enter your email and click on the 'Get Free Key' button  |  ![Get Free Key button](assets/images/readme/get-free-key.PNG)  |
+|  Enter your information to sign up for a free account  |  ![Sign up for a free account](assets/images/readme/create-account.PNG)  |
+|  Your API key will be provided to you once you have signed in  |  ![Page with your API key and information](assets/images/readme/your-key.PNG)   |
+|  Your API key is unique to you. DO NOT SHARE YOUR KEY. Below are the instructions for _`Add .env file`_ which will walk you through setting up a .env file. You will store your key inside of that file to keep it private.  |  see _`Add .env file`_ below  |
+
 
 #### Add .env file to project
 | Steps | Example |
