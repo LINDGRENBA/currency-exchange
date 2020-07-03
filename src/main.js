@@ -5,24 +5,33 @@ import $ from "jquery";
 // import { getExchangeRate } from './currency-exchange-interface';
 
 
+//Business Logic
+function showError(errorMessage) {
+  console.log(`Something went wrong. You got the following error: ${errorMessage}`);
+}
+
+function provideExchangeRate(successfulResponse) {
+  console.log(successfulResponse);
+}
 
 
+
+
+//User Interface Logic
 $(document).ready(function() {
   $("#exchange").click(function() {
 
-    let response = await fetch(`https://v6.exchangerate-api.com/v6/API_KEY/latest/USD`)
-    .then(function(response) {
-      if(!response.ok) {
-        throw Error(response.statusText);
+
+    async function callAPI() {
+      const responseFromAPI = await fetch(`https://v6.exchangerate-api.com/v6/API_KEY/latest/USD`);
+      if(!responseFromAPI.ok) {
+        showError(responseFromAPI.statusText); //write showError function
+      } else {
+        const responseJsonified = await responseFromAPI.json();
+        provideExchangeRate(responseJsonified); //write provideExchangeRate function
       }
-      return response.json();
-    })
-    .catch(function(error) {
-      return error;
-    })
-    .then(function(returnedMessage) {
-      processRequest(returnedMessage);
-    });
+      callAPI();
+    };
 
   });
 });
