@@ -6,6 +6,7 @@ import $ from "jquery";
 //User Interface Logic
 $(document).ready(function() {
   $("#exchange").click(function() {
+    alert('the button works');
 
     let request = new XMLHttpRequest();
     const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
@@ -21,7 +22,7 @@ $(document).ready(function() {
     request.send();
 
     const showResult = function(result) {
-      let message = result.body.conversion_rates; //.result
+      let message = result.conversion_rates.USD; 
       alert(message);
     };
 
