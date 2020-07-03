@@ -59,7 +59,10 @@ Don't be caught without enough money while you're traveling abroad. With our app
 
 | Behavior | Input | Output |  Completed(Y/N?)  | 
 | -------- | ----- | ------ | -------- |
-|          |       |        |          |
+|     Program will make an API call to ExchangeRate.com     |   n/a    |    Information returned from API    |    N     |
+|    Program will return API call with either result or error message    |    n/a    |    Result or Error    |    N    |
+|    Program will return API call with different currency depending on user selection    |   10 USD convert to  Euros    |    Eruos    |    N    |
+
 
 ## Known Bugs
 
