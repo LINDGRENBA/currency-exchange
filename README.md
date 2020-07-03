@@ -20,8 +20,28 @@ ELEVATOR PITCH HERE
 | Navigate to the final location where you have chosen to save the project folder.   |    |   
 | To view the code itself, right click, choose "open with..." and open using a text editor such as VS Code or Atom, etc.   |     |
 |  Once you have cloned or downloaded the project and opened it in VS Code or another text editor, open a new terminal by navigating to Terminal -> New Terminal. A terminal will open on the page.  | ![Opening a terminal in VS Code](assets/images/readme/terminal.PNG)  |
+GET API KEY
+ADD .ENV FILE
 | In the terminal type the command `npm install` to install node modules. You should see a file called node_modules appear  |  ![running npm install](assets/images/readme/npm-install.PNG)  |
 | You can now view the project in your browser by typing the command `npm run start` in the terminal  | `npm run start` |
+
+#### Get a unique API Key
+| Steps | Example |
+| -------- | ----- |
+| To get an API key for the currency exchange website, go to the [ExchangeRate-API](https://www.exchangerate-api.com/) website and click on the button 'Get Free Key' | ![Go to the exchangerate-api.com site](assets/images/readme/exchange-rate-website.PNG) |
+|     |     |
+|     |     |
+|     |     |
+|     |     |
+|     |     |
+|     |     |
+|     |     |
+
+#### Add .env file to project
+| Steps | Example |
+| -------- | ----- |
+|Create a file called .env in the head (top) directory of the project|     |
+|Inside of the file, 
 
 ## Setup/Installation of Node.js and npm
 
