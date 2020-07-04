@@ -8,6 +8,8 @@ $(document).ready(function() {
   $("#exchange").click(function() {
     alert('the button works');
 
+    const covertTo = $("#currency-code").val();
+
     let request = new XMLHttpRequest();
     let euro = 'EUR';
     let turkishLira = 'TRY';

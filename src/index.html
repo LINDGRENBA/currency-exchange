@@ -5,6 +5,22 @@
 </head>
 <body>
   <div class="container">
+    <div class="input">
+      <div class="form-group">
+        <label for="us-dollars">US Currency:</label>
+        <input type="number" id="us-dollars" class="form-control">
+      </div>
+      <div class="form-group">
+        <select id="currency-code" class="form-control">
+          <option value="EUR">EU euro</option>
+          <option value="TRY">Turkish Lira</option>
+          <option value="KRW">South Korean Won</option>
+          <option value="RUB">Russian Ruble</option>
+          <option value="MXN">Mexican Peso</option>
+          <option value="JPY">Japanese Yen</option>
+        </select>
+      </div>
+    </div>
     <button id="exchange" type="submit" class="btn btn-success">Get Exchange Rate</button>
   </div>
 </body>
