@@ -8,9 +8,11 @@ $(document).ready(function() {
   $("#exchange").click(function() {
     alert('the button works');
 
-    const covertTo = $("#currency-code").val();
+    const usDollarInput = $("#us-dollars").val();
+    const covertToInput = $("#currency-code").val();
 
     let request = new XMLHttpRequest();
+    let currencyCodes = ['EUR', 'TRY'] //do loop, if convertToInput = currencyCodes[i], then add currencyCodes[i] to result.conversion_rates.{i goes here} to get the specific value, then multiply it by the user's input for us dollars
     let euro = 'EUR';
     let turkishLira = 'TRY';
     let southKoreanWon = 'KRW';
