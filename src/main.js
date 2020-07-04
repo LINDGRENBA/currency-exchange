@@ -9,6 +9,12 @@ $(document).ready(function() {
     alert('the button works');
 
     let request = new XMLHttpRequest();
+    let euro = 'EUR';
+    let turkishLira = 'TRY';
+    let southKoreanWon = 'KRW';
+    let russianRuble = 'RUB';
+    let mexicanPeso = 'MXN';
+    let japaneseYen = 'JPY';
     const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
 
     request.onreadystatechange = function() {
