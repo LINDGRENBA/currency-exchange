@@ -27,6 +27,12 @@ h1 {
   background-color: #FFF;
 }
 
+.heading {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 200;
+}
+
 .results {
   display: block;
   height: 40px;
