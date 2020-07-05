@@ -20,8 +20,20 @@ Don't be caught without enough money while you're traveling abroad. With our app
 | Navigate to the final location where you have chosen to save the project folder.   |    |   
 | To view the code itself, right click, choose "open with..." and open using a text editor such as VS Code or Atom, etc.   |     |
 |  Once you have cloned or downloaded the project and opened it in VS Code or another text editor, open a new terminal by navigating to Terminal -> New Terminal. A terminal will open on the page.  | ![Opening a terminal in VS Code](assets/images/readme/terminal.PNG)  |
+| Follow the steps below in the Setup and Installation of Node.js and npm section, then complete the next step in this sequence, running `npm install`  |   ## Setup/Installation of Node.js and npm   |
 | In the terminal type the command `npm install` and hit enter to install node modules. You should see a file called node_modules appear and it should be greyed out  |  ![running npm install](assets/images/readme/npm-install.PNG)  |
-| You can now view the project in your browser by typing the command `npm run start` in the terminal  | `npm run start` |    
+| You can now view the project in your browser by typing the command `npm run start` in the terminal  | `npm run start` |   
+
+
+## Setup/Installation of Node.js and npm
+
+| Steps | Example |
+| -------- | ----- |
+|    Download Node.js installer from the [Node JS Website](https://nodejs.org/en/download/)    |    ![Node.js download site](assets/images/readme/node-download.PNG)   |
+|    Once the installer has finished downloaded, click on the 'downloads' link in the browser or navigate to the download on your desktop     |         |
+|     Follow the instructions to complete installation of the Node.js software     |         |
+|     Verify that you have correctly installed Node.js by opening your command terminal and typing `node -v` |   ![check node.js version](assets/images/readme/node1.PNG)    |
+|    Verify that you have correctly installed npm by opening your command terminal and typing `npm -v`   |    ![Check npm version](assets/images/readme/node2.PNG)     |
 
 #### Get a unique API Key
 | Steps | Example |
@@ -41,17 +53,6 @@ Don't be caught without enough money while you're traveling abroad. With our app
 | Once you have added the .env file it should be **greyed out**!!! A greyed out file indicates that it is private, will not be available to the public if you push the project to github and will keep any information inside of it **(such as your API key)** private |  ![the .env file](assets/images/readme/env-file.PNG)  |
 |    Inside of your .env file, you can add your API key. See the format in the image to the right.   |   ![API format in .env file](assets/images/readme/api-env.PNG)    |
 | **_IMPORTANT NOTE_**:  Do not delete or change anything in the project's .gitignore file. This file specifies which directories and files are private and should not be shared or shown to others. The .gitignore should look as it does in the example to the right |  ![.gitignore file](assets/images/readme/gitignore.PNG)  |
-
-
-## Setup/Installation of Node.js and npm
-
-| Steps | Example |
-| -------- | ----- |
-|    Download Node.js installer from the [Node JS Website](https://nodejs.org/en/download/)    |    ![Node.js download site](assets/images/readme/node-download.PNG)   |
-|    Once the installer has finished downloaded, click on the 'downloads' link in the browser or navigate to the download on your desktop     |         |
-|     Follow the instructions to complete installation of the Node.js software     |         |
-|     Verify that you have correctly installed Node.js by opening your command terminal and typing `node -v`, then `npm -v`
-    |    ![check node.js version](assets/images/readme/node1.PNG), ![Check npm version](assets/images/readme/node2.PNG)     |
 
 
 #### Additional Setup/Installation Notes:
