@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
 import { ExchangeService } from './currency-exchange-service';
+import { checkValidCode } from './currency-exchange';
 
 
 //User Interface Logic
