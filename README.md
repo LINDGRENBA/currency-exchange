@@ -47,6 +47,11 @@ Don't be caught without enough money while you're traveling abroad. With our app
 
 | Steps | Example |
 | -------- | ----- |
+|    Download Node.js installer from the [Node JS Website](https://nodejs.org/en/download/)    |    ![Node.js download site](assets/images/readme/node-download.PNG)   |
+|    Once the installer has finished downloaded, click on the 'downloads' link in the browser or navigate to the download on your desktop     |         |
+|     Follow the instructions to complete installation of the Node.js software     |         |
+|     Verify that you have correctly installed Node.js by opening your command terminal and typing `node -v`, then `npm -v`
+    |    ![check node.js version](assets/images/readme/node1.PNG), ![Check npm version](assets/images/readme/node2.PNG)     |
 
 
 #### Additional Setup/Installation Notes:
