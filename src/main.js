@@ -11,9 +11,9 @@ $(document).ready(function() {
 
     const usDollarInput = $("#us-dollars").val();
     const code = $("#currency-code").val();
-    //call a function that checks to make sure code is valid, then write function on other page
-    if(!usDollarInput || usDollarInput < 0) {
-      $("#error").text("Please enter a whole number greater than 0.");
+    const codeIsValid = checkValidCode(code);
+    if(!usDollarInput || usDollarInput < 0 || !codeIsValid) {
+      $("#error").text("Please enter a whole number greater than 0 and check to be sure you have selected a valid currency.");
       $("#error").show();
       $(".results").hide();
     } else {
