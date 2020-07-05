@@ -22,6 +22,31 @@ $(document).ready(function() {
         showExchangeRate(response);
       })();
 
+      
+      
+      // let request = new XMLHttpRequest();
+      // const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
+      
+      // request.onreadystatechange = function() {
+        //   if(this.readyState === 4 && this.status === 200) {
+          //     const response = JSON.parse(this.responseText);
+          //     showExchangeRate(response);
+          //   }
+          // };
+          
+          // request.open("GET", url, true);
+          // request.send();
+          
+          // const showExchangeRate = function(response) {
+            //   let showRate = response.conversion_rates[code];
+            //   let rateTotal = showRate * usDollarInput;
+            //   $("#usd").text("$" + usDollarInput + " USD");
+            //   $("#other-currency").text(rateTotal + " " + code);
+            //   $("#us-dollars").val("");
+            //   $(".results").show();
+            //   $("#error").hide();
+            // };
+      }
       function showExchangeRate(response) {
         if(response) {
           let showRate = response.conversion_rates[code];
@@ -35,32 +60,7 @@ $(document).ready(function() {
           $("#usd").text('There was an error handling your request.');
           $("#other-currency").text('Please check your inputs and try again.');
         }
-      };
-
-
-      // let request = new XMLHttpRequest();
-      // const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
-  
-      // request.onreadystatechange = function() {
-      //   if(this.readyState === 4 && this.status === 200) {
-      //     const response = JSON.parse(this.responseText);
-      //     showExchangeRate(response);
-      //   }
-      // };
-  
-      // request.open("GET", url, true);
-      // request.send();
-  
-      // const showExchangeRate = function(response) {
-      //   let showRate = response.conversion_rates[code];
-      //   let rateTotal = showRate * usDollarInput;
-      //   $("#usd").text("$" + usDollarInput + " USD");
-      //   $("#other-currency").text(rateTotal + " " + code);
-      //   $("#us-dollars").val("");
-      //   $(".results").show();
-      //   $("#error").hide();
-      // };
-    }
+      }
   });
 });
 
