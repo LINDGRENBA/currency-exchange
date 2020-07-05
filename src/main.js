@@ -22,10 +22,13 @@ $(document).ready(function() {
         const response = await exchangeService.getExchangeRate();
         showExchangeRate(response);
       })();
-      }
+    }
 
     function showExchangeRate(response) {
-      if(response) {
+      if(!response) {
+        $("#usd").text('There was an error handling your request.');
+        $("#other-currency").text('Please check your inputs and try again.');
+      } else {
         let showRate = response.conversion_rates[code];
         let rateTotal = showRate * usDollarInput;
         $("#usd").text("$" + usDollarInput + " USD");
@@ -33,12 +36,8 @@ $(document).ready(function() {
         $("#us-dollars").val("");
         $(".results").show();
         $("#error").hide();
-      } else {
-        $("#usd").text('There was an error handling your request.');
-        $("#other-currency").text('Please check your inputs and try again.');
       }
     }
   });
 });
-
 
