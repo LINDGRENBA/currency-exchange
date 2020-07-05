@@ -10,12 +10,13 @@ $(document).ready(function() {
 
     const usDollarInput = $("#us-dollars").val();
     const code = $("#currency-code").val();
+    //call a function that checks to make sure code is valid, then write function on other page
     if(!usDollarInput || usDollarInput < 0) {
       $("#error").text("Please enter a whole number greater than 0.");
       $("#error").show();
       $(".results").hide();
     } else {
-      let request = new XMLHttpRequest();
+      let request = new XMLHttpRequest();  //separate logic
       const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
   
       request.onreadystatechange = function() {
