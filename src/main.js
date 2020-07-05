@@ -16,7 +16,6 @@ $(document).ready(function() {
       $("#error").show();
       $(".results").hide();
     } else {
-
       (async () => {
         let exchangeService = new ExchangeService();
         const response = await exchangeService.getExchangeRate();
@@ -24,13 +23,18 @@ $(document).ready(function() {
       })();
 
       function showExchangeRate(response) {
-        let showRate = response.conversion_rates[code];
-        let rateTotal = showRate * usDollarInput;
-        $("#usd").text("$" + usDollarInput + " USD");
-        $("#other-currency").text(rateTotal + " " + code);
-        $("#us-dollars").val("");
-        $(".results").show();
-        $("#error").hide();
+        if(response) {
+          let showRate = response.conversion_rates[code];
+          let rateTotal = showRate * usDollarInput;
+          $("#usd").text("$" + usDollarInput + " USD");
+          $("#other-currency").text(rateTotal + " " + code);
+          $("#us-dollars").val("");
+          $(".results").show();
+          $("#error").hide();
+        } else {
+          $("#usd").text('There was an error handling your request.');
+          $("#other-currency").text('Please check your inputs and try again.');
+        }
       };
 
 
