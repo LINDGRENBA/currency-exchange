@@ -2,6 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
+import { ExchangeService } from './currency-exchange-service';
 
 
 //User Interface Logic
@@ -16,29 +17,27 @@ $(document).ready(function() {
       $("#error").show();
       $(".results").hide();
     } else {
-      let request = new XMLHttpRequest();  //separate logic
-      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
-  
-      request.onreadystatechange = function() {
-        if(this.readyState === 4 && this.status === 200) {
-          const response = JSON.parse(this.responseText);
-          showExchangeRate(response);
+      (async () => {
+        let exchangeService = new ExchangeService();
+        const response = await exchangeService.getExchangeRate();
+        showExchangeRate(response);
+      })();
+      }
+
+      function showExchangeRate(response) {
+        if(response) {
+          let showRate = response.conversion_rates[code];
+          let rateTotal = showRate * usDollarInput;
+          $("#usd").text("$" + usDollarInput + " USD");
+          $("#other-currency").text(rateTotal + " " + code);
+          $("#us-dollars").val("");
+          $(".results").show();
+          $("#error").hide();
+        } else {
+          $("#usd").text('There was an error handling your request.');
+          $("#other-currency").text('Please check your inputs and try again.');
         }
-      };
-  
-      request.open("GET", url, true);
-      request.send();
-  
-      const showExchangeRate = function(response) {
-        let showRate = response.conversion_rates[code];
-        let rateTotal = showRate * usDollarInput;
-        $("#usd").text("$" + usDollarInput + " USD");
-        $("#other-currency").text(rateTotal + " " + code);
-        $("#us-dollars").val("");
-        $(".results").show();
-        $("#error").hide();
-      };
-    }
+      }
   });
 });
 
